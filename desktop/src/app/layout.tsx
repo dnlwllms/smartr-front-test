@@ -20,8 +20,9 @@ export default function Layout({
   return (
     <RootLayout>
       <Navigation />
-      <TrackingScripts gaId="" />
       {children}
+      {/* TODO: GA 스트림 생성 및 아이디 추가 */}
+      <TrackingScripts gaId="" />
     </RootLayout>
   );
 }

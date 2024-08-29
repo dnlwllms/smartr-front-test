@@ -43,12 +43,12 @@ export default function ActualTransactionPriceChart({
   ...props
 }: Partial<ScatterChartProps>) {
   const handleClick = async () => {
-    r114Request("/auth/login", {
+    const formData = new FormData();
+    formData.append("username", "testduck");
+    formData.append("password", "testduck1!");
+    fetch("http://localhost:8090/auth/login", {
       method: "POST",
-      data: {
-        username: "testduck",
-        password: "testduck1!",
-      }
+      body: formData
     })
   }
 
