@@ -1,5 +1,6 @@
 "use client";
 
+import { r114Request } from "@/common/network/r114/request";
 import { ScatterChart, ScatterChartProps } from "@hdc-ui/react/clients";
 
 import { DateUtility, NumberUtility } from "@hdc-ui/util";
@@ -12,7 +13,7 @@ const endDate = new Date("2023-12-31");
 
 const mock = {
   datasets: [
-    {
+    { 
       label: "83A㎡",
       data: Array.from({ length: 5 }).map(() => ({
         x: DateUtility.getRandomDate([startDate, endDate]),
@@ -41,7 +42,21 @@ export default function ActualTransactionPriceChart({
   data = mock,
   ...props
 }: Partial<ScatterChartProps>) {
+  const handleClick = async () => {
+    r114Request("/auth/login", {
+      method: "POST",
+      data: {
+        username: "testduck",
+        password: "testduck1!",
+      }
+    })
+  }
+
   return (
+    <div>
+      <button onClick={handleClick}>
+        login
+      </button>
     <ScatterChart
       type="basic"
       data={data}
@@ -61,5 +76,6 @@ export default function ActualTransactionPriceChart({
       }}
       {...props}
     />
+    </div>
   );
 }

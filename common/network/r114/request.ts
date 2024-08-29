@@ -22,7 +22,8 @@ export async function r114Request<T>(
       method: options?.method,
       headers: {
         ...init?.headers,
-        "Content-Type": "application/json;charset=UTF-8",
+      "Access-Control-Allow-Origin": "*",
+      "Content-Type": "application/json;charset=UTF-8",
       },
       ...(options?.method !== "GET" &&
         !!options?.data && {

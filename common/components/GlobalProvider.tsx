@@ -2,10 +2,6 @@
 
 import { QueryClient, QueryClientProvider } from "react-query";
 
-import { useQuery } from "react-query";
-
-import { r114Request } from "@/common/network/r114/request";
-
 function AuthProvider({
   children,
 }: Readonly<{

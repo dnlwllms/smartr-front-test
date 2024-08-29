@@ -1,0 +1,6 @@
+[submodule "desktop/public/icons"]
+	path = desktop/public/icons
+	url = https://github.com/hdc-labs-ux/icons.git
+[submodule "mobile/public/icons"]
+	path = mobile/public/icons
+	url = https://github.com/hdc-labs-ux/icons.git

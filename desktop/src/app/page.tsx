@@ -3,9 +3,9 @@ import { Button } from "@hdc-ui/react/components";
 import ActualTransactionPriceChart from "@/common/components/ActualTransactionPriceChart";
 import { getListingStatus } from "@/common/network/r114/listing-status";
 
-export const revalidate = 10 * 1000;
+export const revalidate = 10;
 
-export default async function Home() {
+export default async function Page() {
   const { data: listingStatusData } = await getListingStatus({
     mode: "success-test",
   });
@@ -37,6 +37,7 @@ export default async function Home() {
       <div className="inline-block w-full p-8">
         <ActualTransactionPriceChart />
       </div>
+       
     </main>
   );
 }
