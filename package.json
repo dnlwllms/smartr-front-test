@@ -16,7 +16,7 @@
     "@hdc-ui/core": "^1.0.26",
     "@hdc-ui/foundations": "^1.0.1",
     "@hdc-ui/rds": "^1.1.2",
-    "@hdc-ui/react": "^0.0.52",
+    "@hdc-ui/react": "^0.0.56",
     "@hdc-ui/util": "^1.0.2",
     "@types/jsdom": "^21.1.7",
     "@types/node": "^20",

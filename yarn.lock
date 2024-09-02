@@ -302,6 +302,13 @@
   dependencies:
     "@hdc-ui/foundations" "^1.0.4"
 
+"@hdc-ui/core@^1.0.29":
+  version "1.0.29"
+  resolved "https://registry.yarnpkg.com/@hdc-ui/core/-/core-1.0.29.tgz#0f951f82988a2c476a6215439587a4a5895f99dd"
+  integrity sha512-7qU4xnt9d2jcQETmn0zPRC8tRce9ldhrcC2w4oZ/C3twu0ri//X0j7e7wf3AFCJ43QBNBWadOIHfr1T74EgVzQ==
+  dependencies:
+    "@hdc-ui/foundations" "^1.0.4"
+
 "@hdc-ui/foundations@^1.0.1", "@hdc-ui/foundations@^1.0.4", "@hdc-ui/foundations@^1.0.5":
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/@hdc-ui/foundations/-/foundations-1.0.5.tgz#dd4dda74f9492413cc5934a1bb8e2c4d359a3011"
@@ -327,12 +334,12 @@
     uuid "^9.0.1"
     xlsx "^0.18.5"
 
-"@hdc-ui/react@^0.0.52":
-  version "0.0.52"
-  resolved "https://registry.yarnpkg.com/@hdc-ui/react/-/react-0.0.52.tgz#215c79e41e3575fcde54785cce0f0a64cedc36ed"
-  integrity sha512-z1OaTDDlUqRvci+KCWI7iBK8xyC1WeyejHCUcy0Cwek0K/ZV71A8Rfd7K47jEuqE8119ytEvwlaTkau6t8tQPg==
+"@hdc-ui/react@^0.0.56":
+  version "0.0.56"
+  resolved "https://registry.yarnpkg.com/@hdc-ui/react/-/react-0.0.56.tgz#98ac4fd8396cc1580e95d29d3476d979f9a3faf6"
+  integrity sha512-+pKm1Z+As7Nozt736BVzu9EfCEJi7hGYc1iWklQHIH0KFd83i8JDJqOc1evvuHsLv+pAgoQ0PnI+wZHcTzY2OQ==
   dependencies:
-    "@hdc-ui/core" "^1.0.26"
+    "@hdc-ui/core" "^1.0.29"
     "@hdc-ui/foundations" "^1.0.5"
     "@hdc-ui/util" "^1.0.2"
     chart.js "^4.3.3"

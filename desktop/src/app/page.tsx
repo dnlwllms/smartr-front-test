@@ -8,6 +8,7 @@ import PropertyCard from "@/common/components/PropertyCard";
 import MemberInfo from "@/common/components/MemberInfo";
 
 import { getListingStatus } from "@/common/network/r114/listing-status";
+import Popup from "@/common/components/Popup";
 
 export const revalidate = 10;
 
@@ -91,6 +92,7 @@ export default async function Page() {
         couponCount={839}
         subscriptionProductName="네이버프리120"
       />
+      <Popup landingPopup="등기부등본 자동 첨부" />
     </main>
   );
 }

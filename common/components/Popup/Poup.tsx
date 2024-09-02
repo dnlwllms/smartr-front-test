@@ -126,7 +126,7 @@ export default function Popup(props: PopupProps) {
 
   return (
     <div
-      className="bg-dimmedEffectBlack70D fixed left-0 top-0 z-[10000001] flex h-[100dvh] w-[100dvw] overflow-auto"
+      className="fixed left-0 top-0 z-[10000001] flex h-[100dvh] w-[100dvw] overflow-auto bg-dimmedEffectBlack70D"
       onClick={() => dispatch({ type: "close" })}
     >
       <div className="m-auto inline-block" onClick={(e) => e.stopPropagation()}>
