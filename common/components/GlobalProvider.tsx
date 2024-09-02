@@ -2,6 +2,9 @@
 
 import { QueryClient, QueryClientProvider } from "react-query";
 
+import ChannelIOScript from "./ChannelIOScript";
+import Popup, { PopupProvider } from "./Popup";
+
 function AuthProvider({
   children,
 }: Readonly<{
@@ -21,7 +24,13 @@ export default function GlobalProvier({
 }>) {
   return (
     <QueryClientProvider client={client}>
-      <AuthProvider>{children}</AuthProvider>
+      <AuthProvider>
+        <PopupProvider>
+          {children}
+          <ChannelIOScript />
+          <Popup landingPopup="등기부등본 자동 첨부" />
+        </PopupProvider>
+      </AuthProvider>
     </QueryClientProvider>
   );
 }

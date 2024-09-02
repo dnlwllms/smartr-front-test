@@ -1,14 +1,8 @@
-import Script, { ScriptProps } from "next/script";
+import Script from "next/script";
 
-export type Props = {
-  strategy?: ScriptProps["strategy"];
-};
-
-export default function ChannelIOScript({
-  strategy = "beforeInteractive",
-}: Props) {
+export default function ChannelIOScript() {
   return (
-    <Script id="channel-io" strategy={strategy}>
+    <Script id="channel-io">
       {`
 (function() {
   var w = window;

@@ -6,7 +6,6 @@ import "@hdc-ui/react/components-style";
 import "@/common/global.css";
 
 import GlobalProvier from "@/common/components/GlobalProvider";
-import ChannelIOScript from "@/common/components/ChannelIOScript";
 
 const pretendard = localFont({
   src: "../fonts/PretendardVariable.woff2",
@@ -22,10 +21,7 @@ export default async function RootLayout({
   return (
     <html lang="ko" className={pretendard.className}>
       <body>
-        <GlobalProvier>
-          {children}
-          <ChannelIOScript />
-        </GlobalProvier>
+        <GlobalProvier>{children}</GlobalProvier>
       </body>
     </html>
   );
