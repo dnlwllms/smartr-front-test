@@ -10,13 +10,15 @@
     "dev:desktop": "next dev ./desktop -p 8080",
     "start:mobile": "next start ./mobile",
     "build:mobile": "next build ./mobile",
-    "dev:mobile": "next dev ./mobile -p 8081"
+    "dev:mobile": "next dev ./mobile -p 8081",
+    "docker-build:desktop": "npm run build:desktop && docker build -f Dockerfile.desktop -t desktop .",
+    "docker-build:mobile": "npm run build:mobile && docker build -f Dockerfile.mobile -t mobile ."
   },
   "devDependencies": {
     "@hdc-ui/core": "^1.0.26",
     "@hdc-ui/foundations": "^1.0.1",
     "@hdc-ui/rds": "^1.1.2",
-    "@hdc-ui/react": "^0.0.56",
+    "@hdc-ui/react": "^0.0.58",
     "@hdc-ui/util": "^1.0.2",
     "@types/jsdom": "^21.1.7",
     "@types/node": "^20",

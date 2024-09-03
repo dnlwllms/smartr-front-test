@@ -13,6 +13,9 @@ export interface Props {
   deposit: number;
   couponCount: number;
   subscriptionProductName: string;
+  contractRenewalLink: string;
+  editUserinfoLink: string;
+  homepageManagementLink: string;
 }
 
 const MemberInfo: FC<Props> = ({
@@ -22,6 +25,9 @@ const MemberInfo: FC<Props> = ({
   deposit,
   couponCount,
   subscriptionProductName,
+  contractRenewalLink,
+  editUserinfoLink,
+  homepageManagementLink,
 }) => {
   const rederMember = () => {
     switch (membershipLevel) {
@@ -54,12 +60,14 @@ const MemberInfo: FC<Props> = ({
             </h4>
             <p className="text-body02m text-gray-500">{`${format(contractPeriod[0], "yyyy.MM.dd")} ~ ${format(contractPeriod[1], "yyyy.MM.dd")}`}</p>
           </div>
-          <Button color="white" size="lg" isCapsule>
-            <svg aria-hidden="true">
-              <use href="icons/outlined/edit.svg#Outlined/Edit/write" />
-            </svg>
-            재계약
-          </Button>
+          <Link href={contractRenewalLink}>
+            <Button color="white" size="lg" isCapsule>
+              <svg aria-hidden="true">
+                <use href="icons/outlined/edit.svg#Outlined/Edit/write" />
+              </svg>
+              재계약
+            </Button>
+          </Link>
         </div>
       </div>
       <div className="mb-2.5 flex w-full flex-col rounded-2xl bg-gradient-to-r from-[#FF617F] via-[#FF476A] via-[31.79%] to-[#F91A45] to-[100%] p-4 text-white">
@@ -102,12 +110,18 @@ const MemberInfo: FC<Props> = ({
         My 메뉴
         <ul className="flex gap-x-[17px]">
           <li className="after:content[``] relative after:absolute after:-right-2.5 after:top-2/4 after:h-2 after:w-[1px] after:-translate-y-2/4 after:bg-gray-200">
-            <Link href="" className="text-body02m text-gray-500">
+            <Link
+              href={homepageManagementLink}
+              className="text-body02m text-gray-500"
+            >
               홈페이지 관리
             </Link>
           </li>
           <li>
-            <Link href="" className="text-body02m text-gray-500">
+            <Link
+              href={editUserinfoLink}
+              className="text-body02m text-gray-500"
+            >
               회원정보 수정
             </Link>
           </li>

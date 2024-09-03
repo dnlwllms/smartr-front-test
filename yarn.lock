@@ -334,10 +334,10 @@
     uuid "^9.0.1"
     xlsx "^0.18.5"
 
-"@hdc-ui/react@^0.0.56":
-  version "0.0.56"
-  resolved "https://registry.yarnpkg.com/@hdc-ui/react/-/react-0.0.56.tgz#98ac4fd8396cc1580e95d29d3476d979f9a3faf6"
-  integrity sha512-+pKm1Z+As7Nozt736BVzu9EfCEJi7hGYc1iWklQHIH0KFd83i8JDJqOc1evvuHsLv+pAgoQ0PnI+wZHcTzY2OQ==
+"@hdc-ui/react@^0.0.58":
+  version "0.0.58"
+  resolved "https://registry.yarnpkg.com/@hdc-ui/react/-/react-0.0.58.tgz#780af32acbe9b9541c7413e10d34e6fc557819c8"
+  integrity sha512-GTuW1nfV3QaAkc0avnVbEvuEekejROBPMCnYk2BRSMXj6esRfgFic/TrgX/tU3wUZEu4VPCpKLcFQ336MmVw0Q==
   dependencies:
     "@hdc-ui/core" "^1.0.29"
     "@hdc-ui/foundations" "^1.0.5"

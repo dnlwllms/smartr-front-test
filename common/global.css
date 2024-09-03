@@ -4,5 +4,6 @@
 
 html,
 body {
+  min-width: 1200px;
   min-height: 100dvh;
 }

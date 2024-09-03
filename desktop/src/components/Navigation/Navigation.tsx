@@ -9,6 +9,8 @@ import {
   LANDING_URL_TRANSMISSION_MANAGEMENT,
 } from "@/src/constants";
 
+import Avatar from "./Avatar";
+
 import logoSvg from "../../../public/logo.svg";
 
 export default function Navigation() {
@@ -47,13 +49,16 @@ export default function Navigation() {
           return (
             <li
               key={navItem.key}
-              className="relative contain flex h-full items-center px-6 text-body01m transition-transform after:absolute after:bottom-[-1px] after:left-0 after:inline-block after:h-[2px] after:w-full after:scale-0 after:overflow-hidden after:bg-gray-900 after:bg-clip-content after:px-[inherit] after:duration-200 hover:after:scale-100"
+              className="contain relative flex h-full items-center px-6 text-body01m transition-transform after:absolute after:bottom-[-1px] after:left-0 after:inline-block after:h-[2px] after:w-full after:scale-0 after:overflow-hidden after:bg-gray-900 after:bg-clip-content after:px-[inherit] after:duration-200 hover:after:scale-100"
             >
               <Link href={navItem.link}>{navItem.title}</Link>
             </li>
           );
         })}
       </ul>
+      <div className="desktop:hidden ml-auto flex h-full items-center px-8">
+        <Avatar />
+      </div>
     </nav>
   );
 }
