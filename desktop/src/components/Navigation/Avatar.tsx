@@ -28,6 +28,7 @@ export default function Avatar() {
                 triggerRect={triggerRect}
                 positionOption={{
                   topMargin: (triggerRect?.height || 0) + 8,
+                  leftMargin: (triggerRect?.right || 0) - 375,
                 }}
                 handleClose={handleClose}
               >
