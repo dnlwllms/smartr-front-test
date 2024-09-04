@@ -48,10 +48,9 @@ const config: Config = {
       },
     },
     screens: {
+      mobile: "768px",
       tablet: "1200px",
-      // => @media (min-width: 1280px) { ... }
       desktop: "1600px",
-      // => @media (min-width: 1280px) { ... }
     },
   },
   plugins: [],

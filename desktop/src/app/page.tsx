@@ -5,7 +5,7 @@ import { Button } from "@hdc-ui/react/components";
 import PropertyStatusButton from "@/common/components/PropertyStatusButton";
 import MemberInfo from "@/common/components/MemberInfo";
 
-import { getListingStatus } from "@/common/network/r114/listing-status";
+import { getPropertyStatus } from "@/common/network/r114/property-status";
 import Popup from "@/common/components/Popup";
 
 import {
@@ -18,8 +18,8 @@ import {
 export const revalidate = 10;
 
 export default async function Page() {
-  const { data: listingStatusData } = await getListingStatus({
-    mode: "success-test",
+  const { body: propertyStatusData } = await getPropertyStatus({
+    // mode: "success-test",
   });
 
   const containerStyle =
@@ -48,31 +48,31 @@ export default async function Page() {
             <li className="flex-1">
               <PropertyStatusButton
                 title="네이버 매물"
-                count={listingStatusData?.naver}
+                count={propertyStatusData?.naverCnt}
               />
             </li>
             <li className="flex-1">
               <PropertyStatusButton
                 title="R114 매물"
-                count={listingStatusData?.r114}
+                count={propertyStatusData?.r114Cnt}
               />
             </li>
             <li className="flex-1">
               <PropertyStatusButton
                 title="확인실패"
-                count={listingStatusData?.verificationFailed}
+                count={propertyStatusData?.checkFailCnt}
               />
             </li>
             <li className="flex-1">
               <PropertyStatusButton
                 title="등록실패"
-                count={listingStatusData?.registrationFailed}
+                count={propertyStatusData?.regFailCnt}
               />
             </li>
             <li className="flex-1">
               <PropertyStatusButton
                 title="노출종료"
-                count={listingStatusData?.exposureEnd}
+                count={propertyStatusData?.endExposureCnt}
               />
             </li>
           </ul>

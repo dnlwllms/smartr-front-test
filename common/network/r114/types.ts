@@ -3,7 +3,7 @@ export type CommonGetRequestOptions = {
 };
 
 export type CommonResponse<T> = {
-  status: 200 | 500;
-  message: string;
-  data: T;
+  code: 200 | 500;
+  msg: string;
+  body: T;
 };

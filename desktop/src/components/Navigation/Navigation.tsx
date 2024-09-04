@@ -9,9 +9,9 @@ import {
   LANDING_URL_TRANSMISSION_MANAGEMENT,
 } from "@/src/constants";
 
-import Avatar from "./Avatar";
-
 import logoSvg from "../../../public/logo.svg";
+
+import Avatar from "./Avatar";
 
 export default function Navigation() {
   const navItems = [

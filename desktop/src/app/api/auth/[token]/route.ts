@@ -1,13 +1,19 @@
+import { cookies } from "next/headers";
 import { NextRequest, NextResponse } from "next/server";
 
-export function GET(
+export async function GET(
   request: NextRequest,
   { params }: { params: { [key: string]: unknown } },
 ) {
-  // alert(request.nextUrl.searchParams.get("token"))
-  //   const response = NextResponse.redirect(request.nextUrl.origin);
+  const expiresAt = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000);
 
-  return NextResponse.json({
-    token: params.token,
+  cookies().set("session", String(params.token), {
+    httpOnly: true,
+    secure: true,
+    expires: expiresAt,
+    sameSite: "lax",
+    path: "/",
   });
+
+  return NextResponse.redirect(request.nextUrl.origin);
 }

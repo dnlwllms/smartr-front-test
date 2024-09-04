@@ -27,13 +27,13 @@ export default function Avatar() {
               <Dialog.Body.Popup
                 triggerRect={triggerRect}
                 positionOption={{
-                  topMargin: (triggerRect?.height || 0) + 8,
-                  leftMargin: (triggerRect?.right || 0) - 375,
+                  topMargin: triggerRect?.height,
+                  leftMargin: -32,
                 }}
                 handleClose={handleClose}
               >
                 <div
-                  className={`animate-fadeInDown translate-y z-10 min-w-[375px] rounded-3xl border-solid border-gray-200 bg-white p-6 shadow-[0px_2px_8px_0px_rgba(0,0,0,0.15)]`}
+                  className={`animate-fadeInDown translate-y z-10 w-[375px] rounded-3xl border-solid border-gray-200 bg-white p-6 shadow-[0px_2px_8px_0px_rgba(0,0,0,0.15)]`}
                 >
                   <MemberInfo
                     membershipLevel="정회원"

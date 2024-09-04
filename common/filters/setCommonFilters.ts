@@ -1,3 +1,3 @@
 import { NextRequest } from "next/server";
 
-export default function setCommonFilters(request: NextRequest) {}
+export default async function setCommonFilters(request: NextRequest) {}

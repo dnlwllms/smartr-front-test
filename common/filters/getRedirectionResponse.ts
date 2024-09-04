@@ -1,6 +1,20 @@
 import { NextRequest, NextResponse, userAgent } from "next/server";
 
-export default function getRedirectionResponse(request: NextRequest) {
+import { getUser } from "../network/r114/user";
+
+export default async function getRedirectionResponse(request: NextRequest) {
+  const { body: userData } = await getUser();
+
+  if (!!userData && request.nextUrl.pathname.startsWith("/login")) {
+    request.nextUrl.pathname = "/";
+    return NextResponse.redirect(request.nextUrl.origin);
+  }
+
+  if (!userData && !request.nextUrl.pathname.startsWith("/login")) {
+    request.nextUrl.pathname = "/login";
+    return NextResponse.redirect(new URL(request.nextUrl));
+  }
+
   const { device } = userAgent({ headers: request.headers });
 
   const isDevelopment = process.env.NODE_ENV === "development";
