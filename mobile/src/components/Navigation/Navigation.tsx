@@ -3,8 +3,8 @@ import NavItem from "./NavItem";
 
 export default function Navigation() {
   return (
-    <nav className="sticky bottom-0 h-14 w-full">
-      <ul className="flex px-3 py-1">
+    <nav className="fixed bottom-0 h-14 w-full bg-white">
+      <ul className="flex h-full items-center px-3 py-1">
         {[
           {
             key: 0,

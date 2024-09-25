@@ -1,17 +1,23 @@
+import { Metadata } from "next";
+
 import localFont from "next/font/local";
 
-import "@hdc-ui/react/clients-style";
-import "@hdc-ui/react/components-style";
+import "../../../design-system/react/dist/hui-react-clients.min.css";
+import "../../../design-system/react/dist/hui-react-components.min.css";
+// import "@hdc-ui/react/clients-style";
+// import "@hdc-ui/react/components-style";
 
 import "@/common/global.css";
 
 import GlobalProvier from "@/common/components/GlobalProvider";
 
-const pretendard = localFont({
+export const pretendard = localFont({
   src: "../fonts/PretendardVariable.woff2",
   display: "swap",
   weight: "45 920",
 });
+
+export const metadata: Metadata = {};
 
 export default async function RootLayout({
   children,

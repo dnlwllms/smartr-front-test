@@ -11,16 +11,20 @@ Object.entries(typography).forEach(([key, { fontSize: size, ...values }]) => {
 });
 
 const config: Config = {
+  mode: "jit", // JIT 모드 활성화
   content: [
-    "./desktop/src/**/*.{js,ts,jsx,tsx,mdx}",
-    "./mobile/src/**/*.{js,ts,jsx,tsx,mdx}",
+    "./desktop/**/*.{js,ts,jsx,tsx,mdx}",
+    "./mobile/**/*.{js,ts,jsx,tsx,mdx}",
     "./common/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-
   "tailwindcss/nesting": "postcss-nesting",
+
   "postcss-preset-env": {
-    features: { "nesting-rules": false },
+    features: {
+      "nesting-rules": false,
+    },
   },
+
   ...(process.env.NODE_ENV === "production" ? { cssnano: {} } : {}),
 
   theme: {

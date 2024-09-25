@@ -1,3 +1,7 @@
 import PropertyStatusButton from "./PropertyStatusButton";
 
-export default PropertyStatusButton;
+import PropertyStatus from "./PropertyStatus";
+
+export default PropertyStatus;
+
+export { PropertyStatusButton };

@@ -1,3 +1,5 @@
+export const apiHost = process.env.NEXT_PUBLIC_R114_API_HOST;
+
 export const WRONG_REQUEST_STATUS = 400;
 export const REQUEST_SUCCESS_STATUS = 200;
 export const REQUEST_FAILURE_STATUS = 500;

@@ -1,7 +1,8 @@
 import { Metadata } from "next";
 
-import RootLayout from "@/common/components/RootLayout";
+import Footer from "../components/Footer";
 import Navigation from "@/src/components/Navigation";
+import RootLayout from "@/common/components/RootLayout";
 import TrackingScripts from "@/common/components/TrackingScripts";
 
 export const metadata: Metadata = {
@@ -21,6 +22,7 @@ export default function Layout({
     <RootLayout>
       <Navigation />
       {children}
+      <Footer />
       {/* TODO: GA 스트림 생성 및 아이디 추가 */}
       <TrackingScripts gaId="" />
     </RootLayout>

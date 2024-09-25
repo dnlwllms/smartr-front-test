@@ -1,4 +1,9 @@
+import LoginForm from "@/common/components/LoginForm";
+
 export default function Page() {
-    return "로그인";
-  }
-  
+  return (
+    <div>
+      <LoginForm />
+    </div>
+  );
+}

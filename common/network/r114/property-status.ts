@@ -6,8 +6,8 @@ import {
   REQUEST_FAILURE_STATUS,
   REQUEST_SUCCESS_MESSAGE,
   REQUEST_SUCCESS_STATUS,
-} from "./constants";
-import { r114Request } from "./request";
+} from "../../constants/network";
+import r114Request from "./request";
 
 export type PropertyStatus = {
   /**
@@ -32,11 +32,11 @@ export type PropertyStatus = {
   endExposureCnt: number;
 };
 
-export type GetListingStatusResponse = CommonResponse<PropertyStatus | null>;
+export type GetPropertyStatusResponse = CommonResponse<PropertyStatus | null>;
 
 export async function getPropertyStatus(
   options?: CommonGetRequestOptions,
-): Promise<GetListingStatusResponse> {
+): Promise<GetPropertyStatusResponse> {
   if (options?.mode === "success-test") {
     return {
       code: REQUEST_SUCCESS_STATUS,

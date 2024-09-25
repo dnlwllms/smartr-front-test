@@ -5,14 +5,12 @@ import { Fragment } from "react";
 import { Dialog } from "@hdc-ui/react/clients";
 import { IconButton } from "@hdc-ui/react/components";
 
-import MemberInfo from "@/common/components/MemberInfo";
+import Inquiry from "@/common/components/Inquiry";
 
-import {
-  LANDING_URL_CONTRACT_RENEWAL,
-  LANDING_URL_EDIT_USERINFO,
-  LANDING_URL_HOMEPAGE_MANAGEMENT,
-  SMARTR_ORIGIN_URL,
-} from "@/src/constants";
+import { REMOTE_CONTROL_URL } from "@/src/constants";
+
+import NoticeClient from "../NoticeClient";
+import UserinfoClient from "../UserInfoClient";
 
 export default function Avatar() {
   return (
@@ -33,22 +31,13 @@ export default function Avatar() {
                 handleClose={handleClose}
               >
                 <div
-                  className={`animate-fadeInDown translate-y z-10 w-[375px] rounded-3xl border-solid border-gray-200 bg-white p-6 shadow-[0px_2px_8px_0px_rgba(0,0,0,0.15)]`}
+                  className={`translate-y z-10 min-w-[375px] animate-fadeInDown rounded-3xl border-solid border-gray-200 bg-white py-6 shadow-[0px_2px_8px_0px_rgba(0,0,0,0.15)]`}
                 >
-                  <MemberInfo
-                    membershipLevel="정회원"
-                    name="알실장"
-                    contractPeriod={[
-                      new Date("2024-08-10"),
-                      new Date("2024-12-31"),
-                    ]}
-                    deposit={952284}
-                    couponCount={839}
-                    subscriptionProductName="네이버프리120"
-                    contractRenewalLink={`${SMARTR_ORIGIN_URL}${LANDING_URL_CONTRACT_RENEWAL}`}
-                    editUserinfoLink={`${SMARTR_ORIGIN_URL}${LANDING_URL_EDIT_USERINFO}`}
-                    homepageManagementLink={`${SMARTR_ORIGIN_URL}${LANDING_URL_HOMEPAGE_MANAGEMENT}`}
-                  />
+                  <div className="flex max-h-[calc(100vh-100px)] flex-col gap-y-10 overflow-auto px-6">
+                    <UserinfoClient />
+                    <NoticeClient />
+                    <Inquiry remoteControlUrl={REMOTE_CONTROL_URL} />
+                  </div>
                 </div>
               </Dialog.Body.Popup>
             </Dialog.Body>

@@ -1,0 +1,19 @@
+.chart-label {
+  @apply pointer-events-none absolute whitespace-nowrap rounded bg-[#F2F8FF] px-2 py-1 text-body03m text-blue-500;
+  transform: translate(-50%, -100%);
+}
+
+.chart-label.max {
+  @apply bg-[#FFF5F4] text-red-500;
+}
+
+.chart-tooltip {
+  @apply pointer-events-none absolute z-10 whitespace-nowrap;
+
+  /* transform: translate(0, 0); */
+  transition: all 0.1s ease;
+
+  .container {
+    @apply flex flex-col bg-dimmedEffectBlack70D px-4 py-1 text-body02m text-white rounded;
+  }
+}

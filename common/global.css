@@ -4,5 +4,5 @@
 
 html,
 body {
-  @apply max-desktop:min-w-[1200px] max-mobile:min-w-full min-h-[100dvh];
+  @apply min-h-[100dvh] max-desktop:min-w-[1200px] max-mobile:min-w-full;
 }
